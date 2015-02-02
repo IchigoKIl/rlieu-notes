@@ -1,6 +1,6 @@
 # Built application files
-*.apk
-*.ap_
+# *.apk don't want to ignore apk
+# *.ap_ don't want to ignore ap_ 
 
 # Files for the Dalvik VM
 *.dex
