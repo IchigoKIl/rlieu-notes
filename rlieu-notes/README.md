@@ -1,5 +1,5 @@
 # rlieu-notes
-Author: Raymond Lieu \n
+Author: Raymond Lieu
 UML: /doc/rlieu-notes_UML.png
 Video: https://www.youtube.com/watch?v=Rbt46ft4lLA
 
