@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ClaimActivity" >
+
+    <LinearLayout
+	    android:id="@+id/claimdummy"
+	    android:orientation="horizontal"
+    	android:focusable="true" 
+    	android:focusableInTouchMode="true"
+    	android:layout_width="0px" 
+    	android:layout_height="0px"/>
+
+    <fragment
+        android:id="@+id/claimitemfragment"
+        android:name="as1.rlieu_notes.ItemFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:layout="@layout/itemfragment" />
+
+    <fragment
+        android:id="@+id/expenselistfragment"
+        android:name="as1.rlieu_notes.ExpenseListFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/claimbuttons"
+        android:layout_below="@+id/claimtotals"
+        tools:layout="@layout/listfragment" />
+    
+    <fragment
+        android:id="@+id/claimbuttons"
+        android:name="as1.rlieu_notes.ButtonsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        tools:layout="@layout/buttonsfragment" />
+
+    <TextView
+        android:id="@+id/claimtotalheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/claimitemfragment"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/totals"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/claimtotals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/claimtotalheader"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:hint="@string/no_totals"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+</RelativeLayout>
